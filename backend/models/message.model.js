@@ -31,7 +31,8 @@ const messageSchema = new mongoose.Schema({
     message: {
         type: String, 
         required: true
-    }
+    },
+    shouldShake: { type: Boolean, default:false}
 }, {timestamps: true})
 
 const Message = mongoose.model("Message", messageSchema)
